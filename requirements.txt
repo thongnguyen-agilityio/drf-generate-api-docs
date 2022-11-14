@@ -1,0 +1,5 @@
+Django==3.0.4
+djangorestframework==3.14.0
+drf_spectacular==0.24.2
+drf_yasg==1.21.4
+pyhumps==3.8.0
