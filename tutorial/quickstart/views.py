@@ -62,6 +62,17 @@ class UserViewSet(viewsets.ModelViewSet):
         print(params)
         return Response({'test_abc': 'test3'})
 
+    @action(detail=False, methods=['post'])
+    def test4(self, request):
+        """
+        API to format params, body and response to camelCase
+        """
+        params = humps.decamelize(request.query_params)
+        body = humps.decamelize(request.data)
+        print(params)
+        print(body)
+        return Response({'test_abc': 'test4'})
+
 
 class GroupViewSet(viewsets.ModelViewSet):
     """
